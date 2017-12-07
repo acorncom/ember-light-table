@@ -34,11 +34,13 @@ export default Component.extend(TableCommon, {
     }, {
       label: 'First Name',
       valuePath: 'firstName',
-      width: '150px'
+      width: '150px',
+      component: 'filter-header'
     }, {
       label: 'Last Name',
       valuePath: 'lastName',
-      width: '150px'
+      width: '150px',
+      component: 'filter-header'
     }, {
       label: 'Address',
       valuePath: 'address'

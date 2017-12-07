@@ -165,6 +165,9 @@ export default Mixin.create({
      * @param  {Event} event The click event
      */
     onColumnClick(column) {
+      if(column.component) {
+        return;
+      }
       if (column.sortable && this.get('sortOnClick')) {
         if (column.sorted) {
           column.toggleProperty('ascending');

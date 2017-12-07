@@ -1,0 +1,11 @@
+{{#if filtering}}
+  {{input}}
+{{else}}
+  <a href="#/cookbook/client-side" {{action 'click' bubbles=false}}>{{label}}</a>
+{{/if}}
+
+{{#if (and sortIcons.iconComponent sortIconProperty)}}
+  {{component sortIcons.iconComponent sortIcons=sortIcons sortIconProperty=sortIconProperty}}
+{{else if sortIconProperty}}
+  <i class="lt-sort-icon {{get sortIcons sortIconProperty}}"></i>
+{{/if}}
